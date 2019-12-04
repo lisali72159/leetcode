@@ -15,4 +15,5 @@ def max_sum(arr):
         max_sum = max(current_max, max_sum)
     return max_sum
 
-    
+
+#  Iterate through the array. Track current sum as first number in the array. Compare arr[i] and arr[i + 1]. If the sum is greater than the element alone, add to the sum. If the next ele is greater than the current sum, then new max sum is just the new ele. 
