@@ -1,5 +1,4 @@
 # Pascal's Triangle
-
 # Given an input, find array of the nth line of Pascal's triangle.
 
 def generate_pascal(num):
