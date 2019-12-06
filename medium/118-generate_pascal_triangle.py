@@ -11,6 +11,7 @@
         prevTriangle = self.generate(numRows - 1)
         lastRow = prevTriangle[-1]
         newRow = [1]
+        
         for i in range(len(lastRow) - 1):
             newRow.append(lastRow[i] + lastRow[i + 1])
         newRow.append(1)
