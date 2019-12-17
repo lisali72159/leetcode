@@ -18,11 +18,11 @@ function wordBreak(string, wordDict) {
     let table = new Array(string.length + 1).fill(false);
     table[0] = true;
 
-    for (let i = 0; i < string.length; i++) {
+    for (let i = 0; i < table.length; i++) {
         if (table[i] === false) {
             continue;
         }
-        for (let j = i + 1; j < string.length; j++) {
+        for (let j = i + 1; j < table.length; j++) {
             let word = string.slice(i,j);
             if (wordDict.includes(word)){
                 table[j] = true;
