@@ -29,5 +29,5 @@ function wordBreak(string, wordDict) {
             }
         }
     }
-    return table[table.length - 1];
+    return table[table.length - 1]; 
 }
