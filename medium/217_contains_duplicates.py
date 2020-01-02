@@ -12,4 +12,4 @@ def containsDuplicate(self, nums: List[int]) -> bool:
                 if dict[nums[i]] == 2:
                     return True
             
-        return False 
+        return False
