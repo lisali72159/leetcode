@@ -4,7 +4,7 @@ class ListNode:
         self.val = x
         self.next = None
 
-a1 = two = ListNode(2)
+two = ListNode(2)
 four = ListNode(4)
 three = ListNode(3)
 two.next = four
@@ -18,7 +18,6 @@ five.next = six.next = four_
 # (5 -> 6 -> 4)
 
 
-
 def addTwoNumbers(l1, l2):
     curr1 = l1
     curr2 = l2
@@ -26,8 +25,10 @@ def addTwoNumbers(l1, l2):
     resultCurr = None
     result = None
 
-    while curr1 is not None:
-        sum = curr1.val + curr2.val + carry
+    while curr1 or curr2:
+        val1 = curr1.val if cur1 else 0 #Python ternary
+        val2 = curr2.val if cur2 else 0 
+        sum = val1.val + val2.val + carry
         carry = sum // 10
         digit = sum % 10
         nextNode = ListNode(digit)
@@ -39,14 +40,16 @@ def addTwoNumbers(l1, l2):
             resultCurr.next = nextNode
             resultCurr = resultCurr.next
             
-        curr1 = curr1.next
-        curr2 = curr2.next
+        if curr1: curr1 = curr1.next
+        if curr2: curr2 = curr2.next
 
-        if carry == 1
+        if carry == 1:
             resultCurr.next = ListNode(carry)
 
     return result
 
-addTwoNumbers(a1,b1)
 
-#edge scenarios: different lengths of 2 linked lists, result is different length if there is a carry 
+
+# Edge-case scenarios: different lengths of 2 linked lists, result is different length if there is a carry 
+# Time Complexity: O(n) where n is the length of longest list or O(max(m,n)) 
+# Space Complexity: O(n) where n is the length of longest list
