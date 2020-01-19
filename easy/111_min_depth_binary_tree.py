@@ -22,8 +22,17 @@ class TreeNode(object):
         self.right = None
 
 def minDepth(root):
+    
     if root is None: return 0
+    
+    if root.left and not root.right:
+        return 1 + minDepth(root.left)
+
+    if not root.left and root.right:
+        return 1 + minDepth(root.right)
+
     return 1 + min(minDepth(root.right), minDepth(root.left))
+    
 
 a = TreeNode(3)
 b = TreeNode(9)
