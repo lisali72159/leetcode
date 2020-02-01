@@ -5,4 +5,4 @@ def numIslands(self, grid):
             map(sink, (i + 1, i - 1, i, i), (j, j, j + 1, j - 1))
             return 1
         return 0
-    return sum(sink(i, j) for i in range(len(grid))) for j in range(len(grid[i]))
+    return sum(sink(i, j) for i in range(len(grid))) for j in range(len(grid[i])) 

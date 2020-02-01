@@ -8,6 +8,6 @@ def findPath(tree, sum):
     if tree.val == sum and tree.left == None and tree.right == None:
         return True
     
-    return findPath(tree.left, sum = tree.val) or findPath(tree.right, sum - tree.val)
+    return findPath(tree.left, sum - tree.val) or findPath(tree.right, sum - tree.val)
 
-    
+     
