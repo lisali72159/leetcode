@@ -1,3 +1,8 @@
+#  Are two strings palindromes (allowed to delete one character)?
+ 
+ 
+ 
+ 
  def validPalindrome(self, s: str) -> bool:
         start_idx = 0
         end_idx = len(s) - 1

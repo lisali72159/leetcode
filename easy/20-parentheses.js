@@ -28,9 +28,7 @@ var isValid = function (s) {
     let obj = { ")": "(", "}": "{", "]": "[" }
     let arr = [];
     for (let i = 0; i < s.length; i++) {
-        // console.log(s[i]); 
-        // console.log(s[i + 1]);
-        // console.log(obj[s[i]]);
+        
         if (arr.length === 0) {
             arr.push(s[i]);
         } else if (obj[s[i]] === arr[arr.length - 1]) {
